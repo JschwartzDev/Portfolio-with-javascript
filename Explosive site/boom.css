@@ -1,0 +1,364 @@
+:root {
+  --btn-height: 3vw;
+  --btn-width: 5vw;
+  --btn-font-size: 1vw;
+  --btn-background-color: #63E3E6;
+
+  --control-panel-column-start: 1;
+  --control-panel-column-finish: 4;
+  --control-panel-row-start: 1;
+  --control-panel-row-finish: 4;
+
+  --top-row-column-start: 4;
+  --top-row-column-finish: 10;
+  --top-row-row-start: 1;
+  --top-row-row-finish: 4;
+
+  --left-column-column-start: 1;
+  --left-column-column-finish: 4;
+  --left-column-row-start: 4;
+  --left-column-row-finish: 10;
+
+  --main-content-column-start: 4;
+  --main-content-column-finish: 10;
+  --main-content-row-start: 4;
+  --main-content-row-finish: 10;
+
+  --border-color: #000;
+  --border-width: 5px;
+  --border-style: solid;
+
+  --profile-pic-height: 20vw;
+  --profile-pic-width: 20vw;
+
+  --link-image-height: 5vw;
+  --link-image-width: 5vw;
+
+  --project-image-height: 15vw;
+  --project-image-width: 15vw;
+}
+
+* {
+  margin: .5em;
+  padding: 0;
+}
+
+body {
+  background-color: #1A403B;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 10vw);
+  grid-template-rows: repeat(8, minmax(100px, auto));
+  grid-gap: 1em;
+}
+
+.main-wrapper > * {
+  background-color: #4EBFB2;
+
+}
+
+.danceParty {
+    animation-name: ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+[ani="danceParty"]{
+  animation-name: ;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#control-panel {
+  grid-column: 1/4;
+  grid-row: 1/4;
+
+  display: grid;
+  grid-template-columns: repeat(6, 5.5vw);
+  grid-template-rows: repeat(6, auto);
+  border: var(--border-width) var(--border-style) var(--border-color);
+  padding-left: 1vw;
+
+
+}
+
+/*
+  BELOW CONTAINED WITHIN CONTROL PANEL
+*/
+#control-panel-header {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  text-align:center;
+
+  position: relative;
+  top: 2em;
+}
+.button {
+  border: 1px solid purple;
+}
+
+#boom-btn {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  height: var(--btn-height);
+  width: var(--btn-width);
+
+  font-size: var(--btn-font-size);
+  background-color: var(--btn-background-color);
+}
+
+#un-boom-btn {
+  grid-column: 2/3;
+  grid-row: 4/5;
+
+  height: var(--btn-height);
+  width: var(--btn-width);
+
+  font-size: var(--btn-font-size);
+  background-color: var(--btn-background-color);
+}
+
+#color-change-btn {
+  grid-column: 3/4;
+  grid-row: 4/5;
+
+  height: var(--btn-height);
+  width: var(--btn-width);
+
+  font-size: var(--btn-font-size);
+  background-color: var(--btn-background-color);
+}
+
+#border-color-btn {
+  grid-column: 4/5;
+  grid-row: 4/5;
+  height: var(--btn-height);
+  width: var(--btn-width);
+  white-space: normal;
+  font-size: var(--btn-font-size);
+  background-color: var(--btn-background-color);
+}
+
+#border-style-btn {
+  grid-column: 5/6;
+  grid-row: 4/5;
+  height: var(--btn-height);
+  width: var(--btn-width);
+  white-space: normal;
+  font-size: var(--btn-font-size);
+  background-color: var(--btn-background-color);
+
+}
+
+#dance-party-btn {
+  grid-column: 2/5;
+  grid-row: 5/6;
+  height: var(--btn-height);
+  width: auto;
+  font-size: var(--btn-btn-size);
+  background-color: var(--btn-background-color);
+
+}
+
+
+/*
+  END OF CONTROL PANEL
+*/
+
+#left-column {
+  grid-column: var(--left-column-column-start)/var(--left-column-column-finish);
+  grid-row: var(--left-column-row-start)/var(--left-column-row-finish);
+  border: var(--border-width) var(--border-style) var(--border-color);
+
+}
+
+/*
+  START OF LEFT COLUMN CONTENTS
+*/
+
+  #resources-header1 {
+    font-size:2em;
+  }
+
+  #resources-header2 {
+    font-size: 1.5em;
+  }
+  #main-list {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+
+    font-size: 1.5em;
+  }
+
+
+
+  .sublist {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    line-height: .5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a li {
+    text-indent: 3em;
+    padding: .7em;
+    margin:0;
+  }
+
+  a li:hover {
+    background-color: purple;
+    color: white;
+  }
+
+  a li:active {
+    background-color: orange;
+    color:white;
+  }
+/*
+  END OF LEFT COLUMN CONTENTS
+*/
+
+#top-row {
+  grid-column: var(--top-row-column-start)/var(--top-row-column-finish);
+  grid-row: var(--top-row-row-start)/var(--top-row-row-finish);
+  border: var(--border-width) var(--border-style) var(--border-color);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+/*
+  START OF TOP ROW CONTENTS
+*/
+
+#profile-pic {
+  height: var(--profile-pic-height);
+  width: var(--profile-pic-width);
+  background-clip: padding-box;
+  border-radius: 20px;
+  border: var(--border-width) var(--border-style) var(--border-color);
+}
+#githubimg {
+  background-color:white;
+  background-clip: padding-box;
+}
+
+.links {
+  position: relative;
+  top: 15vw;
+}
+
+
+.link-image {
+  height: var(--link-image-height);
+  width: var(--link-image-width);
+  display: inline-block;
+  border-radius: 20px;
+}
+
+
+
+/*
+  END OF TOP ROW CONTENTS
+*/
+
+
+#main-content {
+  grid-column: var(--main-content-column-start)/var(--main-content-column-finish);
+  grid-row: var(--main-content-row-start)/var(--main-content-row-finish);
+  border: var(--border-width) var(--border-style) var(--border-color);
+
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(12, 5vw);
+
+  grid-gap: 1em;
+}
+
+/*
+  START OF MAIN CONTENT CONTENTS
+*/
+
+#main-content-header {
+  grid-column: 1/13;
+  grid-row: 1/3;
+
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.project-image {
+  height: var(--project-image-height);
+  width: var(--project-image-width);
+  border: var(--border-width) var(--border-style) var(--border-color);
+}
+
+#project1 {
+  grid-column: 3/5;
+  grid-row: 3/6;
+}
+
+#project2 {
+  grid-column: 6/8;
+  grid-row: 3/6;
+}
+
+#project3 {
+  grid-column: 9/11;
+  grid-row: 3/6;
+}
+
+#project4 {
+  grid-column: 3/5;
+  grid-row: 6/10;
+}
+
+#project5 {
+  grid-column: 6/8;
+  grid-row: 6/10;
+}
+
+
+
+
+
+/*
+  END OF MAIN CONTENT CONTENTS
+*/
+
+/*
+  KEYFRAMES
+*/
+
+@keyframes danceParty {
+  0% {
+      background-color: cyan;
+  }
+  25% {
+      background-color: yellow;
+  }
+  50% { {
+      background-color: lightgreen;
+  }
+  75% {
+      background-color: magenta;
+  }
+  100% {
+      background-color: hotpink;
+  }
+}
